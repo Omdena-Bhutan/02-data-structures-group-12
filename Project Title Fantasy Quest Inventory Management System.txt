@@ -1,0 +1,119 @@
+character_profile = {
+    'name': 'Alistair the Brave',
+    'level': 1,
+    'health': 100,
+    'mana': 50,
+    'gold': 50.75,
+    'is_alive': True
+}
+
+#display the dictionary to verify
+print(character_profile)
+print (type(character_profile))
+
+#You can access individual values
+print (f"name:{character_profile['name']}")
+print (f"level:{character_profile['level']}")
+print (f"health:{character_profile['health']}")
+print (f"mana:{character_profile['mana']}")
+print (f"gold:{character_profile['gold']}")
+print (f"is_alive:{character_profile['is_alive']}")
+
+print (f"character:{character_profile['name']}(level:{character_profile['level']})")
+
+character_profile['health'] =85
+print(character_profile)
+
+character_profile['experience'] = 0
+print(character_profile)
+
+print("\nfinal character profile:")
+print (character_profile)
+
+print ("\nfinal character profile:")
+for key, value in character_profile.items():
+    print (f"{key}:{value}")
+
+#creating the inventory list with initial item
+inventory = ['sword','shield','health portion']
+print (inventory)
+
+print("initial Inventory")
+print (inventory)
+
+print("adding new item")
+inventory.append('mana potion')
+print (inventory)
+
+print ('remove shield')
+inventory.remove('shield')
+print (inventory)
+
+print("Inventory items:")
+for item in inventory:
+    print(item)
+
+print ("\ncurrent inventory item:")
+for item in inventory:
+    print(f"{item}")
+
+base_stats = (10, 8, 12)
+print(base_stats)
+
+strength = base_stats[0]
+dexterity = base_stats[1]
+intelligence = base_stats[2]
+
+print(f"Strength: {strength}")
+print(f"Dexterity: {dexterity}")
+print(f"Intelligence: {intelligence}")
+
+print("A tuple is a good choice for storing base stats like strength, dexterity, and intelligence because they are immutable. This means once the tuple is created, its elements cannot be changed, which is suitable for base attributes that should remain constant.")
+
+print(f"Intelligence: {base_stats[2]}")
+
+# Try to change three attribute
+base_stats[0] = 8
+base_stats[1] = 7
+base_stats[2] = 10  
+
+quest_log = {'Defeat the Goblin King', 'Find the Lost Amulet'}
+
+print("Initial Quest Log:")
+print(quest_log)
+
+quest_log.add('Deliver the Old Scroll')
+
+print("Updated Quest Log:")
+print(quest_log)
+
+# Attempt to add a quest that is already in the set
+print("Attempting to add 'Defeat the Goblin King' again...")
+quest_log.add('Defeat the Goblin King')
+
+# Print the quest log again to see if anything changed
+print("Quest Log after attempting to add a duplicate:")
+print(quest_log)
+
+# Remove a completed quest from the set
+print("Removing 'Find the Lost Amulet'...")
+quest_log.remove('Find the Lost Amulet')
+
+# Print the quest log to see the change
+print("Quest Log after removing 'Find the Lost Amulet':")
+print(quest_log)
+
+print("Final Quest Log:")
+print(quest_log)
+
+# Create the character_sheet dictionary
+character_sheet = {
+    'profile': character_profile,
+    'inventory': inventory,
+    'stats': base_stats,
+    'quests': quest_log
+}
+
+# Print the entire character_sheet
+print("--- Alistair's Character Sheet ---")
+print(character_sheet)
